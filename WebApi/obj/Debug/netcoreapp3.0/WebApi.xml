@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Controllers.personInforController">
+            <summary>
+            人员信息
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.personInforController.update(System.String,Entity.Models.PersonInfor)">
+            <summary>
+            修改数据
+            </summary>
+            <param name="id">uid</param>
+            <param name="information">修改信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.personInforController.all">
+            <summary>
+            查询数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.JsonResponse">
+            <summary>
+            构建标准的返回信息
+            </summary>
+        </member>
+        <member name="P:WebApi.JsonResponse.status">
+            <summary>
+            status:200-成功,300-失败,400-参数非法等等
+            </summary>
+        </member>
+        <member name="P:WebApi.JsonResponse.info">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:WebApi.JsonResponse.data">
+            <summary>
+            返回的具体数据信息
+            </summary>
+        </member>
+        <member name="P:WebApi.JsonResponse.log">
+            <summary>
+            返回操作错误提示或日志
+            </summary>
+        </member>
+        <member name="T:WebApi.Page_Info">
+            <summary>
+            构建标准返回数据页的详情
+            </summary>
+        </member>
+        <member name="P:WebApi.Page_Info.total">
+            <summary>
+            返回记录总数
+            </summary>
+        </member>
+        <member name="P:WebApi.Page_Info.index">
+            <summary>
+            返回当前页数
+            </summary>
+        </member>
+        <member name="P:WebApi.Page_Info.size">
+            <summary>
+            返回当前页记录数
+            </summary>
+        </member>
+        <member name="M:WebApi.WebApiAttributes.ApiFilterAttribute.OnResourceExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResourceExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResourceExecutionDelegate)">
+            <summary>
+            请求Api 资源时
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.WebApiAttributes.ApiFilterAttribute.OnResourceExecutedAsync(Microsoft.AspNetCore.Mvc.Filters.ResourceExecutingContext)">
+            <summary>
+            记录Http请求上下文
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

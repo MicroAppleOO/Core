@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Controllers.ceshiController">
+            <summary>
+            测试
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.ceshiController.Get">
+            <summary>
+            测试-所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.suibianController">
+            <summary>
+            学习
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.suibianController.get(System.String)">
+            <summary>
+            一条
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.suibianController.all">
+            <summary>
+            所有
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
