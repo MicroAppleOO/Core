@@ -34,6 +34,12 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //跨域
+            services.AddCors(options => options.AddPolicy("Corspolicy", builder=> 
+            {
+                //builder.WithOrigins("http://localhost:10086").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+            }));
             //swagger
             services.AddSwaggerGen(c =>
             {
@@ -60,6 +66,8 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //跨域
+            app.UseCors("Corspolicy");
             //插入中间件的方式启用EnableBuffering
             app.Use(next => context =>
             {

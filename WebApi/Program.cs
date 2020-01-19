@@ -21,6 +21,7 @@ namespace WebApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://*:10086");
                 });
     }
 }
